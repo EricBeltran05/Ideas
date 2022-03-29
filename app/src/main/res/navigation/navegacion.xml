@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="beltran.fandos.eric.MainScreen"
+        android:label="MainScreen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/action_mainScreen_to_cartsGameFragment"
+            app:destination="@id/cardsGameFragment" />
+        <action
+            android:id="@+id/action_home_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_home_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_home_to_dashboardFragment"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardsGameFragment"
+        android:name="beltran.fandos.eric.Games.CardsGameFragment"
+        android:label="fragment_carts_game"
+        tools:layout="@layout/fragment_cards_game" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="beltran.fandos.eric.Fragments.InfoFragment"
+        android:label="InfoFragment"
+        tools:layout="@layout/fragment_info"/>
+    <fragment
+        android:id="@+id/settings"
+        android:name="beltran.fandos.eric.Fragments.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="beltran.fandos.eric.Fragments.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"/>
+</navigation>
